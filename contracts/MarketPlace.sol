@@ -96,14 +96,14 @@ contract MarketPlace is Ownable, usingOraclize, Pausable {
 
  
     /** 
-    * @dev  Oraclize query to receive latest ETHUSD rate 
+    * @dev  Oraclize query to receive latest ETHUSD rate every 10 seconds
     */    
    function updatePrice() public payable  {
        if (oraclize_getPrice("URL") > address(this).balance) {
            emit LogNewOraclizeQuery("Oraclize query was NOT sent, please add some ETH to cover for the query fee");
        } else {
            emit LogNewOraclizeQuery("Oraclize query was sent, standing by for the answer..");
-           oraclize_query("URL", "json(https://api.gdax.com/products/ETH-USD/ticker).price");
+           oraclize_query(10,"URL", "json(https://api.gdax.com/products/ETH-USD/ticker).price");
        }
    }
 
