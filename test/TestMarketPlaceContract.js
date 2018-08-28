@@ -98,7 +98,7 @@ contract('MarketPlace',function(accounts){
 
 
  
-  it("should let us buy the first item", function() {
+  it("should let user buy the first item", function() {
     return MarketPlace.deployed().then(function(instance) {
       marketPlaceInstance = instance;
       itemId = 1;
