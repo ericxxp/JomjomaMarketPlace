@@ -19,6 +19,7 @@ ethereum-bridge is required since the project uses Oraclize API and we want to t
 - Depends on your ganache address `node bridge -a 9 -H 127.0.0.1 -p 7545 --dev`
 - Wait until you see similar to this `OAR = OraclizeAddrResolverI(0xc0C1027F2bF8084CDe1c749EF21742AA9C4E07Cc);`
 - copy the OAR line you have in your terminal and replace it with the old OAR in MarketPlace Contract Constructor.
+- The Smart Contract deployed in Rinkeby network at address 0xef2f72bbbb606afefdb2d3de2a5a76da83658251 there is no need to run the ethereum-bridge since Rinkeby is integrated with ethereum-bridge
 
 Now follow open new Terminal and do the following: 
 
